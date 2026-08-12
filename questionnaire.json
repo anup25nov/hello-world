@@ -1,0 +1,609 @@
+{
+  "how many years of experience do you have in solution engineering?": {
+    "question": "How many years of experience do you have in Solution Engineering?",
+    "answer": "3"
+  },
+  "how many years of experience do you have in conversational ai?": {
+    "question": "How many years of experience do you have in Conversational AI?",
+    "answer": "0"
+  },
+  "how many years of experience do you have in coding?": {
+    "question": "How many years of experience do you have in Coding?",
+    "answer": "3"
+  },
+  "how many years of experience do you have in cloud?": {
+    "question": "How many years of experience do you have in Cloud?",
+    "answer": "3"
+  },
+  "how many years of experience do you have in bpf?": {
+    "question": "How many years of experience do you have in BPF?",
+    "answer": "0"
+  },
+  "how many years of experience do you have in c++?": {
+    "question": "How many years of experience do you have in C++?",
+    "answer": "0"
+  },
+  "got it! where have you mostly worked in?": {
+    "question": "Got it! Where have you mostly worked in?",
+    "answer": "B2B"
+  },
+  "where have you mostly worked in?": {
+    "question": "Where have you mostly worked in?",
+    "answer": "B2B"
+  },
+  "have you received any call or attended any interview with trianz?": {
+    "question": "Have you received any call or attended any interview with Trianz?",
+    "answer": "NO"
+  },
+  "have you received any call or attended any interview": {
+    "question": "Have you received any call or attended any interview?",
+    "answer": "NO"
+  },
+  "attended any interview with": {
+    "question": "Attended any interview with company?",
+    "answer": "NO"
+  },
+  "do you have pf?": {
+    "question": "Do you have PF?",
+    "answer": "Yes"
+  },
+  "do you have pf": {
+    "question": "Do you have PF?",
+    "answer": "Yes"
+  },
+  "please select the city you are currently residing or willing to relocate to": {
+    "question": "Please select the city you are currently residing or willing to relocate to",
+    "answer": "Gurgaon"
+  },
+  "how many years of experience do you have in natural language processing?": {
+    "question": "How many years of experience do you have in Natural Language Processing?",
+    "answer": "1"
+  },
+  "how many years of experience do you have in applied ai delivery?": {
+    "question": "How many years of experience do you have in applied AI delivery?",
+    "answer": "1"
+  },
+  "how many years of experience do you have in python?": {
+    "question": "How many years of experience do you have in Python?",
+    "answer": "3"
+  },
+  "how many years of experience do you have in llms?": {
+    "question": "How many years of experience do you have in LLMs?",
+    "answer": "2"
+  },
+  "we work all 5 days from office. are you okay with onsite work model?": {
+    "question": "We work all 5 days from office. Are you okay with Onsite work model?",
+    "answer": "Yes"
+  },
+  "are you okay with onsite work mode?": {
+    "question": "Are you okay with Onsite work mode?",
+    "answer": "Yes"
+  },
+  "are you okay with onsite work model?": {
+    "question": "Are you okay with Onsite work model?",
+    "answer": "Yes"
+  },
+  "how many years of experience do you have in ml engineering?": {
+    "question": "How many years of experience do you have in ML Engineering?",
+    "answer": "1"
+  },
+  "are you currently residing in bengaluru or willing to relocate to bengaluru?": {
+    "question": "Are you currently residing in Bengaluru or willing to relocate to Bengaluru?",
+    "answer": "Yes"
+  },
+  "are you currently living in or ready to relocate to bengaluru ?": {
+    "question": "Are you currently living in or ready to relocate to Bengaluru?",
+    "answer": "Yes"
+  },
+  "are you currently living in or ready to relocate to": {
+    "question": "Are you currently living in or ready to relocate to?",
+    "answer": "Yes"
+  },
+  "please provide your email address and phone number": {
+    "question": "Please provide your Email address and Phone Number",
+    "answer": "anupm.ug19.cs@nitp.ac.in"
+  },
+  "how many years of experience do you have in building ai agents?": {
+    "question": "How many years of experience do you have in building AI Agents?",
+    "answer": "1"
+  },
+  "how many years of experience do you have as front end developer?": {
+    "question": "How many years of experience do you have as Front End Developer?",
+    "answer": "1"
+  },
+  "how many years of experience do you have in site reliability engineering?": {
+    "question": "How many years of experience do you have in Site Reliability Engineering?",
+    "answer": "No experience"
+  },
+  "how many years of experience do you have in  site reliability engineering?": {
+    "question": "How many years of experience do you have in  Site Reliability Engineering?",
+    "answer": "No experience"
+  },
+  "do you have working experience in devops automation?": {
+    "question": "Do you have working experience in DevOps Automation?",
+    "answer": "No"
+  },
+  "how many years of experience do you have in incident management?": {
+    "question": "How many years of experience do you have in Incident Management?",
+    "answer": "0"
+  },
+  "how many years of experience do you have in iceberg?": {
+    "question": "How many years of experience do you have in Iceberg?",
+    "answer": "2"
+  },
+  "have you worked as a full-time employee with infoedge?": {
+    "question": "Have you worked as a full-time employee with InfoEdge?",
+    "answer": "No"
+  },
+  "have you worked as a full-time employee with infoedge": {
+    "question": "Have you worked as a full-time employee with InfoEdge?",
+    "answer": "No"
+  },
+  "if yes, please share the employee code": {
+    "question": "If Yes, Please share the Employee Code",
+    "answer": "NA"
+  },
+  "please share your linkedin profile": {
+    "question": "Please share your LinkedIn profile",
+    "answer": "https://www.linkedin.com/in/anup-mishra-bb40a0192/"
+  },
+  "linkedin profile url": {
+    "question": "LinkedIn profile URL",
+    "answer": "https://www.linkedin.com/in/anup-mishra-bb40a0192/"
+  },
+  "share your linkedin": {
+    "question": "Share your LinkedIn",
+    "answer": "https://www.linkedin.com/in/anup-mishra-bb40a0192/"
+  },
+  "notice period": {
+    "question": "Notice period",
+    "answer": "30"
+  },
+  "current ctc": {
+    "question": "Current CTC",
+    "answer": "12"
+  },
+  "expected ctc": {
+    "question": "Expected CTC",
+    "answer": "20"
+  },
+  "willing to relocate": {
+    "question": "Willing to relocate?",
+    "answer": "Yes"
+  },
+  "open to relocation": {
+    "question": "Open to relocation?",
+    "answer": "Yes"
+  },
+  "how many years of experience do you have": {
+    "question": "how many years of experience do you have",
+    "answer": "3",
+    "_note": "catch-all fallback — specific skill keys above take priority"
+  },
+  "which city are you currently residing in": {
+    "question": "which city are you currently residing in",
+    "answer": "Gurgaon"
+  },
+  "are you currently living in or ready to relocate": {
+    "question": "are you currently living in or ready to relocate",
+    "answer": "Yes"
+  },
+  "currently residing in": {
+    "question": "currently residing in",
+    "answer": "Gurgaon"
+  },
+  "are you okay with onsite work mode": {
+    "question": "are you okay with onsite work mode",
+    "answer": "Yes"
+  },
+  "are you comfortable working from office": {
+    "question": "are you comfortable working from office",
+    "answer": "Yes"
+  },
+  "work from office": {
+    "question": "work from office",
+    "answer": "Yes"
+  },
+  "which platform did you take the test": {
+    "question": "which platform did you take the test",
+    "answer": "Hackerrank"
+  },
+  "hackerrank": {
+    "question": "hackerrank",
+    "answer": "Hackerrank"
+  },
+  "serving notice period": {
+    "question": "serving notice period",
+    "answer": "No"
+  },
+  "current salary": {
+    "question": "current salary",
+    "answer": "12"
+  },
+  "expected salary": {
+    "question": "expected salary",
+    "answer": "20"
+  },
+  "where have you mostly worked in": {
+    "question": "where have you mostly worked in",
+    "answer": "B2B"
+  },
+  "immediate joiner": {
+    "question": "immediate joiner",
+    "answer": "No"
+  },
+  "available to join immediately": {
+    "question": "available to join immediately",
+    "answer": "No"
+  },
+  "how many years of experience do you have in iceberg": {
+    "question": "how many years of experience do you have in iceberg",
+    "answer": "2"
+  },
+  "how many years of experience do you have in llms": {
+    "question": "how many years of experience do you have in llms",
+    "answer": "2"
+  },
+  "how many years of experience do you have in natural language": {
+    "question": "how many years of experience do you have in natural language",
+    "answer": "1"
+  },
+  "how many years of experience do you have in solution engineering": {
+    "question": "how many years of experience do you have in solution engineering",
+    "answer": "3"
+  },
+  "how many years of experience do you have in bpf": {
+    "question": "how many years of experience do you have in bpf",
+    "answer": "0"
+  },
+  "filled the form": {
+    "question": "filled the form",
+    "answer": "No"
+  },
+  "we work all 5 days from office. are you okay with onsite work mode?": {
+    "question": "We work all 5 days from office. Are you okay with Onsite work mode?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Yes",
+    "validated": false,
+    "source": "runtime"
+  },
+  "got it! are you currently living in or ready to relocate to bengaluru ?": {
+    "question": "Got it! Are you currently living in or ready to relocate to Bengaluru ?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Yes",
+    "validated": false,
+    "source": "runtime"
+  },
+  "how many years of experience do you have in building ai agents ?": {
+    "question": "How many years of experience do you have in building AI Agents ?",
+    "options": [
+      "No experience",
+      "<3 years",
+      "3-5 years",
+      "5-7 years",
+      "7-8 years",
+      ">8 years"
+    ],
+    "answer": "<3 years",
+    "validated": false,
+    "source": "runtime"
+  },
+  "how many years of experience do you have as front end developer ?": {
+    "question": "How many years of experience do you have as Front End Developer ?",
+    "options": [
+      "No experience",
+      "<3 years",
+      "3-5 years",
+      "5-7 years",
+      "7-8 years",
+      ">8 years"
+    ],
+    "answer": "<3 years",
+    "validated": false,
+    "source": "runtime"
+  },
+  "how many years of experience do you have in compute and related services?": {
+    "question": "How many years of experience do you have in  compute and related services?",
+    "options": [
+      "No experience",
+      "<3 years",
+      "3-6 years",
+      "6-8 years"
+    ],
+    "answer": "<3 years",
+    "validated": false,
+    "source": "runtime"
+  },
+  "got it! do you have experience in can-based bootloader development ?": {
+    "question": "Got it! Do you have experience in CAN-based bootloader development ?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "No",
+    "validated": false,
+    "source": "ai"
+  },
+  "do you have hands-on experience with autosar architecture ?": {
+    "question": "Do you have Hands-on experience with AUTOSAR architecture ?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "No",
+    "validated": false,
+    "source": "ai"
+  },
+  "do you have experience in capl programming?": {
+    "question": "Do you have experience in CAPL programming?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "No",
+    "validated": false,
+    "source": "ai"
+  },
+  "current location (city)": {
+    "question": "Current Location (City)",
+    "options": [],
+    "answer": "Gurgaon",
+    "validated": false,
+    "source": "ai"
+  },
+  "notice period (in days)": {
+    "question": "Notice Period (In days)",
+    "options": [
+      "Immediate Joiner",
+      "0-15",
+      "15-30",
+      "30-45",
+      "45-60",
+      "Serving Notice period"
+    ],
+    "answer": "15-30",
+    "validated": false,
+    "source": "runtime"
+  },
+  "middle name": {
+    "question": "Middle Name",
+    "options": [
+      "Skip"
+    ],
+    "answer": "Skip",
+    "validated": false,
+    "source": "ai"
+  },
+  "what is your current ctc in lacs per annum?": {
+    "question": "What is your current CTC in Lacs per annum?",
+    "answer": "12"
+  },
+  "what is your expected ctc in lacs per annum?": {
+    "question": "What is your expected CTC in Lacs per annum?",
+    "answer": "20"
+  },
+  "what is your notice period?": {
+    "question": "What is your notice period?",
+    "answer": "30"
+  },
+  "how many years of experience do you have in aiml?": {
+    "question": "How many years of experience do you have in Aiml?",
+    "answer": "3"
+  },
+  "how many years of experience do you have in fast api?": {
+    "question": "How many years of experience do you have in Fast API?",
+    "answer": "3"
+  },
+  "please mention your linkedin profile and github url": {
+    "question": "Please Mention your LinkedIn Profile and GitHub URL",
+    "answer": "LinkedIn: https://www.linkedin.com/in/anup-mishra-bb40a0192"
+  },
+  "how many years of experience do you have in gpu training?": {
+    "question": "How many years of experience do you have in GPU training?",
+    "answer": "3"
+  },
+  "what is your current ctc": {
+    "question": "What is your current CTC",
+    "answer": "12"
+  },
+  "what is your expected annual ctc in inr ?": {
+    "question": "What is your expected annual CTC in INR ?",
+    "answer": "30"
+  },
+  "do you have experience in can-based bootloader development ?": {
+    "question": "Do you have experience in CAN-based bootloader development ?",
+    "answer": "No"
+  },
+  "what is your official notice period?": {
+    "question": "What is your official notice period?",
+    "answer": "30 Days"
+  },
+  "how many years of experience do you have in data science?": {
+    "question": "How many years of experience do you have in Data Science?",
+    "answer": "3"
+  },
+  "how many years of experience do you have in llm?": {
+    "question": "How many years of experience do you have in LLM?",
+    "answer": "3"
+  },
+  "how many years of experience do you have in statistical modeling?": {
+    "question": "How many years of experience do you have in Statistical Modeling?",
+    "answer": "3"
+  },
+  "are you currently residing in hyderabad, telangana or willing to relocate to hyderabad, telangana?": {
+    "question": "Are you currently residing in Hyderabad, Telangana or willing to relocate to Hyderabad, Telangana?",
+    "answer": "Gurgaon"
+  },
+  "sorry! i am not trained to answer this query :( are you currently residing in hyderabad, telangana or willing to relocate to hyderabad, telangana?": {
+    "question": "Sorry! I am not trained to answer this query :( Are you currently residing in Hyderabad, Telangana or willing to relocate to Hyderabad, Telangana?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Gurgaon",
+    "validated": false,
+    "source": "runtime"
+  },
+  "what is your current annual ctc in inr?": {
+    "question": "What is your current annual CTC in INR?",
+    "answer": "20"
+  },
+  "what is your preferred job location?": {
+    "question": "What is your preferred job location?",
+    "answer": "Bengaluru"
+  },
+  "what is your highest education qualification (fulltime)?": {
+    "question": "What is your highest education qualification (fulltime)?",
+    "answer": "B.Tech"
+  },
+  "how many years of experience do you hold in fullstack (python) development?": {
+    "question": "How many years of experience do you hold in Fullstack (Python) Development?",
+    "answer": "3"
+  },
+  "what frontend technology experience do you hold?": {
+    "question": "What frontend technology experience do you hold?",
+    "answer": "3"
+  },
+  "are you willing to relocate?": {
+    "question": "Are you willing to relocate?",
+    "answer": "Yes"
+  },
+  "how many years of experience do you have in python ?": {
+    "question": "How many years of experience do you have in Python ?",
+    "answer": "<3 years"
+  },
+  "how many years of experience do you have in fast api ?": {
+    "question": "How many years of experience do you have in fast api ?",
+    "answer": "<3 years"
+  },
+  "got it! are you willing to relocate?": {
+    "question": "Got it! Are you willing to relocate?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Yes",
+    "validated": false,
+    "source": "runtime"
+  },
+  "are you currently living in or ready to relocate to hyderabad ?": {
+    "question": "Are you currently living in or ready to relocate to Hyderabad ?",
+    "answer": "Yes"
+  },
+  "how many years of experience do you have in artificial intelligence ?": {
+    "question": "How many years of experience do you have in Artificial Intelligence ?",
+    "answer": "2-4 years"
+  },
+  "how many years of experience do you have in agentic ai": {
+    "question": "How many years of experience do you have in agentic Ai",
+    "answer": "2-4 years"
+  },
+  "how many years of experience do you have in mcp ?": {
+    "question": "How many years of experience do you have in mcp ?",
+    "answer": "2-4 years"
+  },
+  "got it! are you currently living in or ready to relocate to hyderabad ?": {
+    "question": "Got it! Are you currently living in or ready to relocate to Hyderabad ?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Yes",
+    "validated": false,
+    "source": "runtime"
+  },
+  "what is your 10th % ?": {
+    "question": "What is your 10th % ?",
+    "answer": "Not provided"
+  },
+  "what is your 12th % ?": {
+    "question": "What is your 12th % ?",
+    "answer": "Not provided"
+  },
+  "what is your graduation degree ?": {
+    "question": "What is your Graduation Degree ?",
+    "answer": "B.Tech"
+  },
+  "what is graduation % ?": {
+    "question": "What is Graduation % ?",
+    "answer": "Not provided"
+  },
+  "what is your current ctc ?": {
+    "question": "What is your Current CTC ?",
+    "answer": "12"
+  },
+  "what is your expected ctc ?": {
+    "question": "What is your Expected CTC ?",
+    "answer": "20"
+  },
+  "what is your notice period ?": {
+    "question": "What is your Notice Period ?",
+    "answer": "30"
+  },
+  "are you comfortable to commute/relocating to noida": {
+    "question": "Are you comfortable to commute/relocating to Noida",
+    "answer": "Yes"
+  },
+  "this role is in-office at our gurugram (sector 65) office, 5 days a week - non-negotiable. which describes you?": {
+    "question": "This role is in-office at our Gurugram (Sector 65) office, 5 days a week - non-negotiable. Which describes you?",
+    "answer": "I'm outside NCR but will relocate to Gurugram before joining"
+  },
+  "which best describes your agent-orchestration experience?": {
+    "question": "Which best describes your agent-orchestration experience?",
+    "answer": "0"
+  },
+  "this answer decides shortlisting: in 4-6 lines, one llm feature you shipped to real users, the ugliest edge case you hit, and how you handled it.": {
+    "question": "This answer decides shortlisting: in 4-6 lines, ONE LLM feature you shipped to real users, the ugliest edge case you hit, and how you handled it.",
+    "answer": "I shipped a feature that allowed users to generate personalized content using an LLM. The ugliest edge"
+  },
+  "how long have you built llm-powered features that ran in production for real users?": {
+    "question": "How long have you built LLM-powered features that ran in production for real users?",
+    "answer": "0"
+  },
+  "link to your github / portfolio / a project you're proud of (optional but strongly helps your application)": {
+    "question": "Link to your GitHub / portfolio / a project you're proud of (optional but strongly helps your application)",
+    "answer": "https://github.com/anupmishra"
+  },
+  "how many years of experience do you have in golang ?": {
+    "question": "How many years of experience do you have in Golang ?",
+    "answer": "2-3 years"
+  },
+  "how many years of experience do you have as backend developer ?": {
+    "question": "How many years of experience do you have as Backend Developer ?",
+    "answer": "2-3 years"
+  },
+  "how many years of experience do you have as backend python developer ?": {
+    "question": "How many years of experience do you have as Backend Python Developer ?",
+    "answer": "2-4 years"
+  },
+  "how many years of experience do you have in \"system design\" ?": {
+    "question": "How many years of experience do you have in \"System Design\" ?",
+    "answer": "2-4 years"
+  },
+  "how many years of experience do you have in machine learning?": {
+    "question": "How many years of experience do you have in Machine Learning?",
+    "answer": "3"
+  },
+  "how many years of experience do you have in credit risk modelling?": {
+    "question": "How many years of experience do you have in Credit Risk Modelling?",
+    "answer": "3"
+  },
+  "how many years of experience do you have in propensity?": {
+    "question": "How many years of experience do you have in PROPENSITY?",
+    "answer": "3"
+  },
+  "how many years of experience do you have in fraud?": {
+    "question": "How many years of experience do you have in Fraud?",
+    "answer": "3"
+  },
+  "how many years of experience do you have in langchain?": {
+    "question": "How many years of experience do you have in Langchain?",
+    "answer": "3"
+  }
+}
