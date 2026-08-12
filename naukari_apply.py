@@ -51,6 +51,7 @@ if not COOKIES_RAW:
 
 if not OPENAI_API_KEY or not NAUK_AT or not COOKIES_RAW:
     print("❌  Missing credentials! Must set OPENAI_API_KEY, NAUK_AT, and COOKIES_RAW in env or config.json.")
+    print(f"{not OPENAI_API_KEY} | {not NAUK_AT} | {not COOKIES_RAW}")
     sys.exit(1)
 
 # Ensure nauk_at is cleaned from COOKIES_RAW and then replaced with the fresh NAUK_AT
