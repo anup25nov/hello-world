@@ -33,4 +33,4 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           NAUK_AT: ${{ secrets.NAUK_AT }}
           COOKIES_RAW: ${{ secrets.COOKIES_RAW }}
-        run: python3 naukri_apply.py --apply
+        run: python3 naukari_apply.py --apply
