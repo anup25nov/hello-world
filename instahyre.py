@@ -18,33 +18,58 @@ APPLY_URL = (
     "candidate_opportunity/apply"
 )
 
-PARAMS = [
+# ============================================================
+# SKILL SETS
+# ============================================================
+# 4 different skill-based search profiles to maximize coverage.
+# Each set targets a different combination of skills to surface
+# unique job listings that a single query might miss.
+
+SKILL_SETS = {
+    "Set 1 - Full Stack Backend": [
+        "Python", "Django", "Java", "FastAPI", "MySQL",
+        "PostgreSQL", "MongoDB", "AWS", "Kafka", "Redis",
+        "Celery", "Grafana", "JavaScript", "LLMs", "Claude",
+    ],
+    "Set 2 - Backend + AI/ML": [
+        "Python", "FastAPI", "Microservices", "PostgreSQL",
+        "Kafka", "MongoDB", "AWS", "Docker", "REST APIs",
+        "SQL", "Redis", "Celery", "SQLAlchemy", "LLMs", "MCP",
+    ],
+    "Set 3 - Backend + Cloud": [
+        "Python", "Microservices", "Kafka", "PostgreSQL",
+        "MongoDB", "AWS", "Docker", "Redis", "Celery",
+        "SQLAlchemy", "REST APIs", "DynamoDB", "S3", "Flask",
+        "Sanic",
+    ],
+    "Set 4 - AI/LLM Focused": [
+        "Python", "FastAPI", "LLMs", "MCP", "Claude",
+        "Microservices", "PostgreSQL", "MongoDB", "Kafka",
+        "AWS", "Docker", "REST APIs", "Redis", "SQLAlchemy",
+        "Celery",
+    ],
+}
+
+# Base params common to all skill sets
+BASE_PARAMS = [
     ("company_size", "0"),
     ("job_categories", "1"),
     ("job_functions", "10"),
     ("job_functions", "1"),
     ("job_type", "0"),
-
-    ("skills", "Python"),
-    ("skills", "Django"),
-    ("skills", "Java"),
-    ("skills", "FastAPI"),
-    ("skills", "MySQL"),
-    ("skills", "PostgreSQL"),
-    ("skills", "MongoDB"),
-    ("skills", "AWS"),
-    ("skills", "Kafka"),
-    ("skills", "Redis"),
-    ("skills", "Celery"),
-    ("skills", "Grafana"),
-    ("skills", "JavaScript"),
-    ("skills", "LLMs"),
-    ("skills", "Claude"),
-
     ("source", "opportunities"),
     ("status", "0"),
     ("years", "3"),
 ]
+
+
+def build_params(skills):
+    """Build the full query params for a given list of skills."""
+    params = list(BASE_PARAMS)
+    for skill in skills:
+        params.append(("skills", skill))
+    return params
+
 
 # ============================================================
 # COOKIE PARSER
@@ -108,7 +133,6 @@ session.headers.update({
 # ============================================================
 # FETCH JOBS
 # ============================================================
-
 
 
 # ============================================================
@@ -185,50 +209,108 @@ def apply_job(job):
 # ============================================================
 # MAIN
 # ============================================================
-def fetch_all_jobs():
-    all_jobs = []
+
+def fetch_jobs_for_skill_set(set_name, skills, seen_job_ids):
+    """
+    Fetch all pages of jobs for a given skill set.
+    Skips jobs already seen (by job ID) to avoid duplicate applications.
+    Returns (new_jobs_list, updated_seen_job_ids).
+    """
+    new_jobs = []
     page = 1
+    params = build_params(skills)
+    applied_count = 0
+    skipped_count = 0
 
     while True:
-        print(f"\nFetching page {page}...")
+        print(f"\n  [{set_name}] Fetching page {page}...")
 
-        response = session.get(
-            LISTING_URL,
-            params=PARAMS + [("page", page)],
-            timeout=30,
-        )
-
-        response.raise_for_status()
+        try:
+            response = session.get(
+                LISTING_URL,
+                params=params + [("page", page)],
+                timeout=30,
+            )
+            response.raise_for_status()
+        except requests.RequestException as e:
+            print(f"  [{set_name}] Request error on page {page}: {e}")
+            break
 
         data = response.json()
         jobs = data.get("objects", [])
 
-        print(f"Found {len(jobs)} jobs")
+        print(f"  [{set_name}] Found {len(jobs)} jobs on page {page}")
 
         if not jobs:
-            print("No more jobs. Stopping.")
+            print(f"  [{set_name}] No more jobs. Moving on.")
             break
 
-        all_jobs.extend(jobs)
-
-        # Apply to jobs from this page
         for job in jobs:
+            job_id = job.get("id")
+
+            if job_id in seen_job_ids:
+                title = job.get("title", "Unknown")
+                print(f"\n  SKIPPED (duplicate): {title} (ID: {job_id})")
+                skipped_count += 1
+                continue
+
+            seen_job_ids.add(job_id)
+            new_jobs.append(job)
+
             apply_job(job)
-            time.sleep(2)
+            applied_count += 1
+            time.sleep(SLEEP_SECONDS)
 
         page += 1
 
+    print(f"\n  [{set_name}] Summary: "
+          f"{applied_count} applied, {skipped_count} skipped (duplicates)")
+
+    return new_jobs, seen_job_ids
+
+
+def fetch_all_jobs():
+    """
+    Iterate through all 4 skill sets, fetch and apply to jobs.
+    Deduplicates across sets so the same job is only applied to once.
+    """
+    all_jobs = []
+    seen_job_ids = set()
+
+    for set_name, skills in SKILL_SETS.items():
+        print()
+        print("=" * 70)
+        print(f"  SKILL SET: {set_name}")
+        print(f"  Skills: {' | '.join(skills)}")
+        print("=" * 70)
+
+        new_jobs, seen_job_ids = fetch_jobs_for_skill_set(
+            set_name, skills, seen_job_ids
+        )
+        all_jobs.extend(new_jobs)
+
+        # Brief pause between skill sets to be polite to the API
+        if skills != list(SKILL_SETS.values())[-1]:
+            print(f"\n  Pausing {SLEEP_SECONDS}s before next skill set...")
+            time.sleep(SLEEP_SECONDS)
+
     return all_jobs
+
 
 def main():
     print("=" * 70)
-    print("INSTAHYRE AUTO APPLY")
+    print("INSTAHYRE AUTO APPLY — MULTI-SKILL SET MODE")
+    print(f"Running {len(SKILL_SETS)} skill sets")
     print("=" * 70)
 
     jobs = fetch_all_jobs()
 
-    print("\nFinished.")
-    print(f"Total jobs processed: {len(jobs)}")
+    print()
+    print("=" * 70)
+    print("FINISHED")
+    print(f"Total unique jobs processed: {len(jobs)}")
+    print("=" * 70)
+
 
 if __name__ == "__main__":
     main()
