@@ -15,7 +15,7 @@ LISTING_URL = "https://www.instahyre.com/api/v1/job_search"
 APPLY_URL = (
     "https://www.instahyre.com/"
     "api/v1/candidate_opportunities/"
-    "candidate_opportunity/apply"
+    "candidate_matching/apply"
 )
 
 # ============================================================
@@ -48,9 +48,6 @@ SKILL_SETS = {
         "AWS", "Docker", "REST APIs", "Redis", "SQLAlchemy",
         "Celery",
     ],
-    "Set 5 - All python": [
-            "Python"
-        ],
 }
 
 # Base params common to all skill sets
@@ -173,9 +170,8 @@ def apply_job(job):
         return False
 
     payload = {
-        "is_interested": True,
-        "id": None,
         "job_id": job_id,
+        "is_interested": True,
         "is_activity_page_job": False,
     }
 
