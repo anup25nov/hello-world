@@ -48,8 +48,6 @@ SKILL_SETS = {
         "AWS", "Docker", "REST APIs", "Redis", "SQLAlchemy",
         "Celery",
     ],
-    "Set 5 - All python" :[
-        "Python"]
 }
 
 # Base params common to all skill sets
@@ -64,10 +62,26 @@ BASE_PARAMS = [
     ("years", "3"),
 ]
 
+# Base params with no job_categories/job_functions/years filter,
+# so jobs excluded by those filters still surface.
+BASE_PARAMS_UNFILTERED = [
+    ("company_size", "0"),
+    ("job_type", "0"),
+    ("source", "opportunities"),
+    ("status", "0"),
+]
 
-def build_params(skills):
+# Catch-all set(s): run with BASE_PARAMS_UNFILTERED instead of BASE_PARAMS.
+# Empty skills list = no "skills" query param at all, so every opportunity
+# is returned regardless of skill match (listed in SKILL_SETS or not).
+CATCHALL_SKILL_SETS = {
+    "Set 5 - Catch-All (All Opportunities, No Skill/Category/Function/Years Filter)": ["Python"],
+}
+
+
+def build_params(skills, base_params=BASE_PARAMS):
     """Build the full query params for a given list of skills."""
-    params = list(BASE_PARAMS)
+    params = list(base_params)
     for skill in skills:
         params.append(("skills", skill))
     return params
@@ -211,7 +225,7 @@ def apply_job(job):
 # MAIN
 # ============================================================
 
-def fetch_jobs_for_skill_set(set_name, skills, seen_job_ids):
+def fetch_jobs_for_skill_set(set_name, skills, seen_job_ids, base_params=BASE_PARAMS):
     """
     Fetch all pages of jobs for a given skill set.
     Skips jobs already seen (by job ID) to avoid duplicate applications.
@@ -219,7 +233,7 @@ def fetch_jobs_for_skill_set(set_name, skills, seen_job_ids):
     """
     new_jobs = []
     page = 1
-    params = build_params(skills)
+    params = build_params(skills, base_params)
     applied_count = 0
     skipped_count = 0
 
@@ -265,43 +279,55 @@ def fetch_jobs_for_skill_set(set_name, skills, seen_job_ids):
         page += 1
 
     print(f"\n  [{set_name}] Summary: "
-          f"{applied_count} applied, {skipped_count} skipped (duplicates)")
+        f"{applied_count} applied, {skipped_count} skipped (duplicates)")
 
     return new_jobs, seen_job_ids
 
 
 def fetch_all_jobs():
     """
-    Iterate through all 4 skill sets, fetch and apply to jobs.
-    Deduplicates across sets so the same job is only applied to once.
+    Iterate through all skill sets (filtered + catch-all), fetch and
+    apply to jobs. Deduplicates across sets so the same job is only
+    applied to once.
     """
     all_jobs = []
     seen_job_ids = set()
 
-    for set_name, skills in SKILL_SETS.items():
-        print()
-        print("=" * 70)
-        print(f"  SKILL SET: {set_name}")
-        print(f"  Skills: {' | '.join(skills)}")
-        print("=" * 70)
+    # (skill_sets, base_params) groups, run in order.
+    groups = [
+        (SKILL_SETS, BASE_PARAMS),
+        (CATCHALL_SKILL_SETS, BASE_PARAMS_UNFILTERED),
+    ]
+    all_set_names = [
+        name for skill_sets, _ in groups for name in skill_sets
+    ]
 
-        new_jobs, seen_job_ids = fetch_jobs_for_skill_set(
-            set_name, skills, seen_job_ids
-        )
-        all_jobs.extend(new_jobs)
+    for skill_sets, base_params in groups:
+        for set_name, skills in skill_sets.items():
+            print()
+            print("=" * 70)
+            print(f"  SKILL SET: {set_name}")
+            print(f"  Skills: {' | '.join(skills)}")
+            print("=" * 70)
 
-        # Brief pause between skill sets to be polite to the API
-        if skills != list(SKILL_SETS.values())[-1]:
-            print(f"\n  Pausing {SLEEP_SECONDS}s before next skill set...")
-            time.sleep(SLEEP_SECONDS)
+            new_jobs, seen_job_ids = fetch_jobs_for_skill_set(
+                set_name, skills, seen_job_ids, base_params
+            )
+            all_jobs.extend(new_jobs)
+
+            # Brief pause between skill sets to be polite to the API
+            if set_name != all_set_names[-1]:
+                print(f"\n  Pausing {SLEEP_SECONDS}s before next skill set...")
+                time.sleep(SLEEP_SECONDS)
 
     return all_jobs
 
 
 def main():
+    total_sets = len(SKILL_SETS) + len(CATCHALL_SKILL_SETS)
     print("=" * 70)
     print("INSTAHYRE AUTO APPLY — MULTI-SKILL SET MODE")
-    print(f"Running {len(SKILL_SETS)} skill sets")
+    print(f"Running {total_sets} skill sets")
     print("=" * 70)
 
     jobs = fetch_all_jobs()
