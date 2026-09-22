@@ -48,6 +48,8 @@ SKILL_SETS = {
         "AWS", "Docker", "REST APIs", "Redis", "SQLAlchemy",
         "Celery",
     ],
+    "Set 5 - All python" :[
+        "Python"]
 }
 
 # Base params common to all skill sets
