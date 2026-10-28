@@ -26,27 +26,41 @@ APPLY_URL = (
 # unique job listings that a single query might miss.
 
 SKILL_SETS = {
-    "Set 1 - Full Stack Backend": [
-        "Python", "Django", "Java", "FastAPI", "MySQL",
-        "PostgreSQL", "MongoDB", "AWS", "Kafka", "Redis",
-        "Celery", "Grafana", "JavaScript", "LLMs", "Claude",
+    "Set 1 - SDET / Automation": [
+        "Automation Testing", "Selenium", "Playwright", "Python", "pytest",
+        "API Testing", "Postman", "Rest APIs", "Behavior Driven Development",
+        "CI / CD", "CI", "Azure DevOps", "SQL", "Regression Testing", "Swagger",
     ],
-    "Set 2 - Backend + AI/ML": [
-        "Python", "FastAPI", "Microservices", "PostgreSQL",
-        "Kafka", "MongoDB", "AWS", "Docker", "REST APIs",
-        "SQL", "Redis", "Celery", "SQLAlchemy", "LLMs", "MCP",
+    "Set 2 - Manual + Automation (Hybrid QA)": [
+        "Manual Testing", "Automation Testing", "Functional Testing",
+        "Regression Testing", "Test case design", "Defect Analysis",
+        "API Testing", "Selenium", "Python", "Postman", "SQL",
+        "Azure DevOps", "Agile", "Playwright", "Rest APIs",
     ],
-    "Set 3 - Backend + Cloud": [
-        "Python", "Microservices", "Kafka", "PostgreSQL",
-        "MongoDB", "AWS", "Docker", "Redis", "Celery",
-        "SQLAlchemy", "REST APIs", "DynamoDB", "S3", "Flask",
-        "Sanic",
+    "Set 3 - API Testing Focus": [
+        "API Testing", "Postman", "Swagger", "Rest APIs", "Python", "pytest",
+        "SQL", "Automation Testing", "Regression Testing", "Functional Testing",
+        "Azure DevOps", "CI / CD", "Defect Analysis", "Agile",
+        "Behavior Driven Development",
     ],
-    "Set 4 - AI/LLM Focused": [
-        "Python", "FastAPI", "LLMs", "MCP", "Claude",
-        "Microservices", "PostgreSQL", "MongoDB", "Kafka",
-        "AWS", "Docker", "REST APIs", "Redis", "SQLAlchemy",
-        "Celery",
+    "Set 4 - Manual / Functional QA": [
+        "Manual Testing", "Functional Testing", "Test case design",
+        "Regression Testing", "Defect Analysis", "Agile", "SQL",
+        "Azure DevOps", "API Testing", "Postman", "Swagger", "Rest APIs",
+        "Automation Testing", "Selenium", "Python",
+    ],
+    "Set 5 - Automation Frameworks + CI": [
+        "Selenium", "Playwright", "Python", "pytest",
+        "Behavior Driven Development", "Automation Testing", "CI", "CI / CD",
+        "Azure DevOps", "Regression Testing", "API Testing", "Postman",
+        "Test case design", "SQL", "Agile",
+    ],
+    "Set 6 - All Profile Skills": [
+        "Automation Testing", "Manual Testing", "API Testing",
+        "Regression Testing", "Functional Testing", "Selenium", "Playwright",
+        "Python", "Postman", "Behavior Driven Development", "pytest",
+        "Swagger", "Rest APIs", "SQL", "Azure DevOps", "CI", "CI / CD",
+        "Test case design", "Defect Analysis", "Agile",
     ],
 }
 
